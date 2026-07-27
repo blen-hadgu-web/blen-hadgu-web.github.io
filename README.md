@@ -7,8 +7,8 @@ A responsive, accessible personal resume for **Blen Hadgu**, built with semantic
 Replace the Netlify and Cloudflare placeholders after deployment.
 
 - GitHub Pages: `https://blen-hadgu-web.github.io/`
-- Netlify: `https://YOUR-SITE-NAME.netlify.app/`
-- Cloudflare Pages: `https://YOUR-PROJECT-NAME.pages.dev/`
+- Netlify: `https://subtle-biscuit-b94e40.netlify.app/`
+- Cloudflare Pages: `https://blen-hadgu-web-github-io.pages.dev/`
 
 ## Repository
 
