@@ -1,87 +1,92 @@
-# Personal Resume Webpage
+#  Semantic Resume
 
-A responsive personal resume webpage for **Blen Hadgu**, built with semantic HTML5 and modern CSS. The project focuses on clean presentation, responsive design, and accessibility aligned with WCAG 2.1 Level AA principles.
+A responsive, accessible personal resume for **Blen Hadgu**, built with semantic HTML5 and modern CSS.
 
-## Project Overview
+## Live Deployments
 
-This project converts a traditional resume into a single-page website. It presents professional experience, education, skills, and contact information using accessible semantic structure.
+Replace the Netlify and Cloudflare placeholders after deployment.
 
-## Features
+- GitHub Pages: `https://blen-hadgu-web.github.io/`
+- Netlify: `https://YOUR-SITE-NAME.netlify.app/`
+- Cloudflare Pages: `https://YOUR-PROJECT-NAME.pages.dev/`
 
-* Semantic HTML5 landmarks, including `header`, `nav`, `main`, `section`, `article`, `aside`, and `footer`
-* Sequential heading hierarchy
-* Individual experience entries structured as articles
-* Machine-readable employment and education dates using `time`
-* Accessible email, telephone, and LinkedIn links
-* Keyboard-visible focus indicators
-* Responsive layout for mobile and desktop screens
-* CSS Grid and Flexbox layout
-* Print-friendly styles
-* Dark-mode support
-* Reduced-motion support
-* No JavaScript or external frameworks required
+## Repository
 
-## Technologies Used
+`https://github.com/blen-hadgu-web/blen-hadgu-web.github.io`
 
-* HTML5
-* CSS3
-* CSS Grid
-* Flexbox
-
-## Project Structure
+## Project Files
 
 ```text
-accessible-resume-webpage/
+blen-hadgu-web.github.io/
+├── .nojekyll
+├── favicon-32.png
+├── favicon.svg
 ├── index.html
-├── styles.css
-└── README.md
+├── netlify.toml
+├── og-image.png
+├── README.md
+├── robots.txt
+└── styles.css
 ```
 
-## How to Run the Project
+## Production Optimizations
 
-### Option 1: Open the File Directly
+- Search-engine-friendly page title and description
+- Canonical URL
+- Open Graph metadata for professional sharing previews
+- Twitter/X large-image card metadata
+- 1200 × 630 Open Graph preview image
+- SVG and PNG favicons
+- Public `robots.txt`
+- Netlify root publish configuration
+- `.nojekyll` for direct static publishing on GitHub Pages
 
-1. Download or clone this repository.
-2. Open the project folder.
-3. Double-click `index.html`.
-4. The resume webpage will open in your default browser.
+## Run Locally
 
-### Option 2: Use Visual Studio Code
+No dependencies or build step are required.
 
-1. Open the project folder in Visual Studio Code.
-2. Open `index.html`.
-3. Use the **Live Server** extension to launch the page, or open the file directly in a browser.
+1. Clone or download this repository.
+2. Open `index.html` in a browser.
 
-No installation, build command, package manager, or local server is required.
+## Deployment Configuration
 
-## Accessibility
+### GitHub Pages
 
-The webpage was designed with the following accessibility practices:
+- Source: Deploy from a branch
+- Branch: `main`
+- Folder: `/(root)`
 
-* Semantic page landmarks
-* Descriptive link text
-* Logical heading order
-* Keyboard navigation support
-* Visible focus states
-* Sufficient color contrast
-* Responsive text and layout
-* Reduced-motion preference support
-* Proper list markup for grouped information
-* Machine-readable dates
+### Netlify
 
-## Testing
+- Repository: `blen-hadgu-web/blen-hadgu-web.github.io`
+- Production branch: `main`
+- Base directory: leave blank
+- Build command: leave blank
+- Publish directory: `.`
 
-The webpage can be tested by:
+### Cloudflare Pages
 
-1. Navigating through all interactive elements using the `Tab` key.
-2. Zooming the browser to 200%.
-3. Viewing the page at mobile and desktop widths.
-4. Running an automated accessibility audit with Lighthouse.
-5. Reviewing the heading structure and landmarks with browser accessibility tools.
+- Repository: `blen-hadgu-web/blen-hadgu-web.github.io`
+- Production branch: `main`
+- Framework preset: None
+- Root directory: leave blank
+- Build command: `exit 0`
+- Build output directory: `.`
+
+## AI Collaboration Prompt
+
+> I have deployed my raw HTML/CSS resume to GitHub Pages, Netlify, and Cloudflare Pages. Act as a senior DevOps engineer and frontend performance expert. Review my HTML and CSS code and provide the code/instructions for three critical production optimizations:
+>
+> Open Graph (OG) Meta Tags: Generate the `<meta>` tags I need to add to my `<head>` so that when I share my resume link on LinkedIn, Slack, or Discord, it displays a professional preview card (including title, description, and a preview image).
+>
+> SEO & Favicon: Give me the exact HTML code to point to a professional favicon and add a search-engine-friendly description.
+>
+> Performance Diagnostics: Explain what a `robots.txt` file is, and generate a basic, valid `robots.txt` file for my site that allows search engines to index it.
+
+## What robots.txt Does
+
+`robots.txt` is a plain-text file at the root of a website that gives web crawlers instructions about which public paths they may crawl. It is not a security mechanism and does not hide private information. This project allows crawlers to access the entire public resume.
 
 ## Author
 
 **Blen Hadgu**
-
-Seattle, Washington
-
