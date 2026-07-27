@@ -1,0 +1,471 @@
+:root {
+  color-scheme: light;
+  --page: #ffffff;
+  --surface: #f3f6f8;
+  --surface-strong: #e5edf1;
+  --ink: #17212b;
+  --muted: #52616f;
+  --accent: #075f70;
+  --accent-strong: #064652;
+  --border: #c7d2d9;
+  --focus: #9c2c00;
+  --measure: 72rem;
+  --step--1: clamp(0.875rem, 0.84rem + 0.15vw, 0.95rem);
+  --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.1rem);
+  --step-1: clamp(1.25rem, 1.16rem + 0.4vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.42rem + 0.75vw, 2.1rem);
+  --step-3: clamp(2.25rem, 1.95rem + 1.35vw, 3.25rem);
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --radius: 0.75rem;
+  --shadow: 0 0.75rem 2.5rem rgb(23 33 43 / 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+body > header,
+body > main,
+body > footer {
+  width: min(calc(100% - 2rem), var(--measure));
+  margin-inline: auto;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.2em;
+}
+
+a:focus-visible,
+[tabindex="-1"]:focus-visible {
+  outline: 0.2rem solid var(--focus);
+  outline-offset: 0.22rem;
+  border-radius: 0.15rem;
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  border-radius: 0.35rem;
+  background: var(--ink);
+  color: var(--page);
+  font-weight: 700;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  display: grid;
+  gap: var(--space-5);
+  padding-block: clamp(2.5rem, 8vw, 5.5rem) var(--space-5);
+  border-bottom: 0.12rem solid var(--border);
+}
+
+.identity {
+  max-width: 55rem;
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-1);
+  color: var(--accent);
+  font-size: var(--step--1);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-block-start: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.18;
+}
+
+h1 {
+  margin-block-end: var(--space-3);
+  font-size: var(--step-3);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-block-end: var(--space-4);
+  padding-block-end: var(--space-2);
+  border-bottom: 0.14rem solid var(--accent);
+  font-size: var(--step-2);
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  margin-block-end: 0.3rem;
+  font-size: var(--step-1);
+  letter-spacing: -0.015em;
+}
+
+address {
+  font-style: normal;
+}
+
+.contact-list,
+nav ul,
+.skill-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.35rem;
+  color: var(--muted);
+}
+
+.contact-list li {
+  min-width: max-content;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+nav a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding-inline: 1rem;
+  border: 0.1rem solid var(--border);
+  border-radius: 999rem;
+  background: var(--surface);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+nav a:hover {
+  border-color: var(--accent);
+  background: var(--surface-strong);
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  padding-block: var(--space-6);
+}
+
+.experience,
+.education,
+.skills {
+  min-width: 0;
+}
+
+.resume-entry {
+  padding-block: var(--space-4);
+  border-bottom: 0.08rem solid var(--border);
+}
+
+.resume-entry:first-of-type {
+  padding-block-start: 0;
+}
+
+.resume-entry:last-child {
+  border-bottom: 0;
+}
+
+.resume-entry header {
+  margin-block-end: var(--space-3);
+}
+
+.organization {
+  margin-block-end: var(--space-2);
+  color: var(--accent-strong);
+  font-weight: 750;
+}
+
+.entry-details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.1rem var(--space-3);
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.entry-details dt {
+  font-weight: 750;
+}
+
+.entry-details dd {
+  margin: 0;
+}
+
+.achievement-list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+}
+
+.achievement-list li {
+  padding-inline-start: 0.35rem;
+}
+
+.achievement-list li + li {
+  margin-block-start: 0.45rem;
+}
+
+.skills {
+  align-self: start;
+  padding: var(--space-4);
+  border: 0.1rem solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.skills h2 {
+  margin-block-end: var(--space-4);
+}
+
+.skills section + section {
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-4);
+  border-top: 0.08rem solid var(--border);
+}
+
+.skills h3 {
+  margin-block-end: var(--space-2);
+  font-size: var(--step-0);
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.skill-list li {
+  padding: 0.35rem 0.7rem;
+  border: 0.08rem solid var(--border);
+  border-radius: 999rem;
+  background: var(--page);
+  font-size: var(--step--1);
+  font-weight: 650;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  padding-block: var(--space-4);
+  border-top: 0.12rem solid var(--border);
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  main {
+    grid-template-columns: minmax(0, 2fr) minmax(17rem, 0.85fr);
+    grid-template-areas:
+      "experience skills"
+      "education skills";
+    align-items: start;
+  }
+
+  .experience {
+    grid-area: experience;
+  }
+
+  .education {
+    grid-area: education;
+  }
+
+  .skills {
+    grid-area: skills;
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+@media (max-width: 34rem) {
+  body > header,
+  body > main,
+  body > footer {
+    width: min(calc(100% - 1.25rem), var(--measure));
+  }
+
+  .contact-list,
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-list li {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  nav a {
+    justify-content: center;
+  }
+
+  .entry-details {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-details dt:not(:first-of-type) {
+    margin-block-start: 0.45rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #11181f;
+    --surface: #19242d;
+    --surface-strong: #24333d;
+    --ink: #f2f6f8;
+    --muted: #c2cdd3;
+    --accent: #7ed3df;
+    --accent-strong: #9ce2ea;
+    --border: #49606c;
+    --focus: #ffb38f;
+    --shadow: 0 0.75rem 2.5rem rgb(0 0 0 / 0.3);
+  }
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+    --page: #ffffff;
+    --surface: #ffffff;
+    --ink: #000000;
+    --muted: #333333;
+    --accent: #000000;
+    --accent-strong: #000000;
+    --border: #777777;
+  }
+
+  @page {
+    margin: 0.55in;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  body > header,
+  body > main,
+  body > footer {
+    width: 100%;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding-block: 0 1rem;
+  }
+
+  nav,
+  .skip-link,
+  footer {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "experience"
+      "education"
+      "skills";
+    gap: 1.25rem;
+    padding-block: 1rem 0;
+  }
+
+  .skills {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .skills section {
+    break-inside: avoid;
+  }
+
+  .resume-entry {
+    break-inside: avoid;
+    padding-block: 0.75rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
