@@ -1,0 +1,16 @@
+Semantic Resume Deployment Submission
+
+GitHub Pages Link:
+https://blen-hadgu-web.github.io/
+
+Netlify Link:
+[Paste the final https://...netlify.app/ URL here]
+
+Cloudflare Pages Link:
+[Paste the final https://...pages.dev/ URL here]
+
+Updated Public Repository:
+https://github.com/blen-hadgu-web/blen-hadgu-web.github.io
+
+Video Demonstration:
+[Paste your Loom, Zoom, YouTube, or other recording link here]
